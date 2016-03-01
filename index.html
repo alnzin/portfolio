@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/stilo.css"> 
+    <title>Aplicativo</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">  
+</head>
+<style>
+   /* *{ border: 1px solid blue;} */
+</style>
+<body>
+    <div class="navbar navbar-app navbar-top verde topo">
+    <div class="navbar-brand navbar-brand-center">
+        <span>CURRÍCULO</span>
+	</div>
+	</div>        
+    
+    <div class="col-xs-12">
+        <div class="media-left" style="width: 60px;" >    
+			<img id="ft1" onmouseover="ft()"class="img-circle" width="80" height="80" src="C:\Users\adm\Documents\GitHub\git-teste\minha pagina\img\IMG_0562.jpg">
+        </div>
+        <div class="media-body">
+            <div class="list-group">
+                <a href="#" class="list-group-item oto">
+                <h4 class="list-group-item-heading"> Alan Nascimento de Souza</h4>
+                <p class="list-group-item-text"><b>Telefones: </b>(27) 3299-1828 / 99824-1722 (VIVO) / 98102-9818 (TIM)</p>
+                <p class="list-group-item-text"><b>Email: </b>alann.life@gmail.com </p>
+                </a>       
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <ul class="tabs">
+        <li onClick="t1()" >Dados Pessoais</li>
+        <li onClick="t2()" >Formação</li>
+        </ul>
+    </div>
+	<script>
+	
+	function t1(){
+    document.getElementById('tab-2').style.display = 'none';
+    document.getElementById('tab-1').style.display = 'block';
+}
+
+	function t2(){
+    document.getElementById('tab-1').style.display = 'none';
+    document.getElementById('tab-2').style.display = 'block';
+}
+
+	function ft(){
+	document.getElementById('ft1').style.transform= "rotate(500grad)";	
+	document.getElementById('ft1').style.transition= "3s ease";
+}
+
+	</script>
+    
+    
+    <div class="col-xs-12">
+        <div id="tab-1" class="tab-content">
+            <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th>COLIGAÇÃO:</th>
+                        <td>PartidoColigacao
+                            <br />PartidoColigacaoDescricao
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>NASCIMENTO:</th>
+                        <td>DataNascimento</td>
+                    </tr>
+                    <tr>
+                        <th>ESTADO CIVIL:</th>
+                        <td>EstadoCivil</td>
+                    </tr>
+                    <tr>
+                        <th>ESCOLARIDADE:</th>
+                        <td>Escolaridade}}</td>
+                    </tr>
+                    <tr>
+                        <th>OCUPAÇÃO:</th>
+                        <td>cupacao</td>
+                    </tr>
+                    <tr>
+                        <th>NACIONALIDADE:</th>
+                        <td>Nacionalidade</td>
+                    </tr>
+                    <tr>
+                        <th>MUNICIPIO:</th>
+                        <td>Municipio</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="tab-2" class="tab-content">
+        <table class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th>Descricao</th>
+                        <td>Graduando em Sistemas de Informação</td>
+                    </tr>
+                    <tr>
+                        <th>Descricao</th>
+                        <td>Valor</td>
+                    </tr>
+                    <tr>
+                        <th>Descricao</th>
+                        <td>Valor</td>
+                    </tr>
+                    <tr>
+                        <th>Descricao</th>
+                        <td>Valor</td>
+                    </tr>					
+                </tbody>
+            </table>
+        </div>
+    </div>
+        
+</body>
+</html>
