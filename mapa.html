@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Exercício Mapa</title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    </head> 
+	
+  	<body>
+        <div id="map" style="height:500; width:500" style="text-align:center"></div>
+		
+        <script>
+			//criando o mapa
+            var map = L.map('map');
+			
+			//criando a localizacao inicial do marcador
+            var ufesLatLong =[-20.3540422, -40.3036076];
+			map.setView(ufesLatLong,15);
+			
+			//criando marcador
+			var marcador= L.marker(ufesLatLong,{draggable:true, riseOnHover:true});
+			marcador.addTo(map);
+			
+			//------------- UMEI ---------------------
+			var quadriLatLng = [
+			
+            [-20.35324774141533,-40.30154228210449],
+            [-20.353700395438878,-40.301215052604675],
+            [-20.35417316600262,-40.30206263065338],
+			[-20.353695365957012,-40.30236840248108], //x,y
+			] 
+
+			//criar a area do quadrado
+			var quadrado = L.polygon(quadriLatLng);
+			quadrado.addTo(map);
+			
+			var popupUMEI = L.popup().setContent('<img src="img/umei" width="250" height=175"><br><b>Escola</b>');
+			//-----------------------------------------
+			
+			//criando camada de imagem com a biblioteca
+			var camadaDeImagem = 
+			L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
+			camadaDeImagem.addTo(map);
+			
+			//criando popup
+			var popup = L.popup();
+			popup.setContent("<p>Escola</p>");
+			quadrado.bindPopup(popup);
+			
+			marcador.on("dragend",function(){map.setView(marcador.getLatLng(),15);});
+			//funcao do marcador 
+			marcador.on("dragend",function(ev){
+				var chagedPoslat = ev.target.getLatLng().lat;
+				var chagedPoslng = ev.target.getLatLng().lng;
+				
+				if ( chagedPoslat < -20.353695365957012 && chagedPoslat > -20.35417316600262 && chagedPoslng > -40.30236840248108 && chagedPoslng < -40.301215052604675  )
+				{                     
+					this.bindPopup('<img src="img/umei.jpg" width="250" height=175"><br><b>Umei Luiz Augusto Aguirre da Silva</b>').openPopup();
+				}
+				
+				
+			});
+		</script>
+    </body>
+</html>
+
+
+

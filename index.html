@@ -1,33 +1,37 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
+	<title>
+	</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <meta charset="UTF-8">
+	
 	<link rel="stylesheet" type="text/css" href="css/stilo.css"> 
-    <title>Aplicativo</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">  
+	
+	<script src="js/portifolio.js"></script>
 </head>
 <style>
    /* *{ border: 1px solid blue;} */
 </style>
 <body>
+	<script>window.onload = init();</script>
     <div class="navbar navbar-app navbar-top verde topo">
     <div class="navbar-brand navbar-brand-center">
-        <span>CURRÍCULO</span>
+        <span>PORTIFÓLIO</span>
 	</div>
 	</div>        
     
     <div class="col-xs-12">
         <div class="media-left" style="width: 60px;" >    
-			<img id="ft1" onmouseover="ft()"class="img-circle" width="80" height="80" src="C:\Users\adm\Documents\GitHub\git-teste\minha pagina\img\IMG_0562.jpg">
+			<img id="ft1" onmouseover="ft()"class="img-circle" width="80" height="80" src="img\IMG_0562.jpg">
         </div>
         <div class="media-body">
             <div class="list-group">
                 <a href="#" class="list-group-item oto">
                 <h4 class="list-group-item-heading"> Alan Nascimento de Souza</h4>
-                <p class="list-group-item-text"><b>Telefones: </b>(27) 3299-1828 / 99824-1722 (VIVO) / 98102-9818 (TIM)</p>
                 <p class="list-group-item-text"><b>Email: </b>alann.life@gmail.com </p>
                 </a>       
             </div>
@@ -35,91 +39,82 @@
     </div>
     <div class="col-xs-12">
         <ul class="tabs">
-        <li onClick="t1()" >Dados Pessoais</li>
-        <li onClick="t2()" >Formação</li>
+        <li onClick="mostrartab1()">Dados Pessoais</li>
+        <li onClick="mostrartab2()" >Atividades</li>
         </ul>
     </div>
-	<script>
-	
-	function t1(){
-    document.getElementById('tab-2').style.display = 'none';
-    document.getElementById('tab-1').style.display = 'block';
-}
 
-	function t2(){
-    document.getElementById('tab-1').style.display = 'none';
-    document.getElementById('tab-2').style.display = 'block';
-}
-
-	function ft(){
-	document.getElementById('ft1').style.transform= "rotate(500grad)";	
-	document.getElementById('ft1').style.transition= "3s ease";
-}
-
-	</script>
-    
-    
     <div class="col-xs-12">
-        <div id="tab-1" class="tab-content">
+        <div id="tab1" class="tab-content">
             <table class="table table-striped">
                 <tbody>
                     <tr>
-                        <th>COLIGAÇÃO:</th>
-                        <td>PartidoColigacao
-                            <br />PartidoColigacaoDescricao
+                        <th>Escolaridade:</th>
+                        <td>Ensino Médio Completo
+                            <br/>Cursando 7º período de Sistemas de Informação, horário: Noturno.
                         </td>
                     </tr>
                     <tr>
-                        <th>NASCIMENTO:</th>
-                        <td>DataNascimento</td>
+                        <th>Cursos Extra Curriculares:</th>
+                        <td>- Inglês – Nível Intermediate (CEI-Centro Estadual de Idiomas, 3 anos)
+						<br>- Curso Técnico em informática (Cedaspy, 18 meses).
+						<br>- Curso de Digitação (Cedaspy, 10 hrs).
+						<br>- Curso de Aprendizagem Industrial: Mantenedor de Infra Estrutura de Redes ( SENAI,1 ano).
+						<br>- Curso de Formação de Instrutores CFI (Cedaspy, 1 ano).
+						<br>- Curso de Atendimento ao Cliente(SENAC, 1 mês (12/05/2012-02/06/2012)
                     </tr>
                     <tr>
-                        <th>ESTADO CIVIL:</th>
-                        <td>EstadoCivil</td>
+                        <th>Experiências Profissionais:</th>
+                        
+						<td>PREFEITURA MUNICIPAL DE CARIACICA
+						<br>Setor: SEMFI/SUB-TI
+						<br>Período: 01//04/2011 à 31/10/2011
+						<br><b>Função: Estagiário Técnico de Informática</b>
+						<br>
+						<br>SPASSU TECNOLOGIA
+						<br>Período: 01/01/2013 até 31/06/2013
+						<br><b>Função: Técnico de TI / N1</b>
+						<br>
+						<br>DETRAN-ES
+						<br>Período: 09/09/2013 até 31/12/2014
+						<br>Setor: Infraestrutura/HelpDesk
+						<br><b>Função: Estágiário</b>
+						<br>
+                        <br>TJ-ES
+						<br>Setor: STI
+						<br>Período: 18/09/2014 até o momento
+						<br><b>Função: Estagiário </b></td>
+
+						
+						
                     </tr>
-                    <tr>
-                        <th>ESCOLARIDADE:</th>
-                        <td>Escolaridade}}</td>
-                    </tr>
-                    <tr>
-                        <th>OCUPAÇÃO:</th>
-                        <td>cupacao</td>
-                    </tr>
-                    <tr>
-                        <th>NACIONALIDADE:</th>
-                        <td>Nacionalidade</td>
-                    </tr>
-                    <tr>
-                        <th>MUNICIPIO:</th>
-                        <td>Municipio</td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>
         
-        <div id="tab-2" class="tab-content">
+        <div id="tab2" class="tab-content">
         <table class="table table-striped">
                 <tbody>
                     <tr>
-                        <th>Descricao</th>
-                        <td>Graduando em Sistemas de Informação</td>
+                        <th>Atividade 1</th>
+                        <td><a href="teclado.html"> Teclado Numérico</a></td>
                     </tr>
                     <tr>
-                        <th>Descricao</th>
-                        <td>Valor</td>
+                        <th>Atividade 2</th>
+                        <td><a href="mapa.html"> Mapa</a></td>
                     </tr>
                     <tr>
-                        <th>Descricao</th>
-                        <td>Valor</td>
+                        <th>Atividade 3</th>
+                        <td><a href="jogo.html"> Jogo Canvas</a></td>
                     </tr>
                     <tr>
-                        <th>Descricao</th>
-                        <td>Valor</td>
+                        <th>Atividade 4</th>
+                        <td><a href=""> Exemplo</a></td>
                     </tr>					
                 </tbody>
             </table>
         </div>
     </div>
-        
 </body>
 </html>

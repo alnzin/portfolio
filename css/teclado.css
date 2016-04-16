@@ -1,0 +1,65 @@
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+	width: 80px;
+	height: 80px;
+	margin: 2px;
+}
+
+.button4:hover {background-color: #e7e7e7;}
+
+.background {
+	width: 270px;
+	height: 400px;
+	display: inline-block;
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	border: 2px solid;
+}
+
+.options {
+	margin: 0 10 10 10;
+}
+.option {
+	display: table-cell;
+	width: 70px;
+	height: 70px;
+	border: 0px solid;
+	vertical-align:middle;
+	text-align:center
+}
+
+.selected {
+	background: rgba(0,0,255,0.5);
+}
+
+.result {
+	margin: 15 20 15 15;
+	width: 245px;
+	height: 30px;
+	border: 0px solid;
+
+	display: flex; //source: http://stackoverflow.com/a/21375314/1269898
+}
+
+
